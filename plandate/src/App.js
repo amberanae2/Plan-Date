@@ -16,17 +16,15 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
+import Carousel from './Carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-/* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
 const HomepageHeading = ({ mobile }) => (
   <Container text>
   <BackgroundSlide />
     <Header
       as='h1'
-      content='Plan-Date'
+      content='Plan-A-Date'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -37,7 +35,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='Let Us Help You Plan Your Date Today!'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -46,7 +44,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size='huge'>
-      Get Started
+      Search
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -56,10 +54,7 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
+
 class DesktopContainer extends Component {
   state = {}
 
@@ -94,9 +89,6 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
                     Log in
@@ -209,7 +201,7 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+              Lets See Whats Happening!
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               We can give your company superpowers to do things that they never thought possible.
@@ -238,22 +230,22 @@ const HomepageLayout = () => (
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
-            </Header>
+
+            <Carousel/>
+
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+          {/* </Grid.Column>
+          {/* <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               "I shouldn't have gone with their competitor."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='/images/avatar/large/nan.jpg' />
               <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
+            </p> */}
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> */}
     </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
@@ -274,7 +266,8 @@ const HomepageLayout = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Case Studies</a>
+  
+          {/* <a href='#'>Case Studies</a> */}
         </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
