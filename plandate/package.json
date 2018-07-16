@@ -9,6 +9,7 @@
     "graphql-tag": "^2.9.2",
     "react": "^16.4.1",
     "react-apollo": "^2.1.9",
+    "react-background-slideshow": "^1.0.3",
     "react-dom": "^16.4.1",
     "react-responsive-carousel": "^3.1.41",
     "react-reveal": "^1.2.2",

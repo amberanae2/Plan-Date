@@ -17,6 +17,7 @@ import {
 } from 'semantic-ui-react'
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Advertisements from './Advertisements';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -239,7 +240,7 @@ const HomepageLayout = () => (
             <Carousel/>
             
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          {/* </Grid.Column>
+          </Grid.Column>
           {/* <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               "I shouldn't have gone with their competitor."
@@ -247,24 +248,34 @@ const HomepageLayout = () => (
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='/images/avatar/large/nan.jpg' />
               <b>Nan</b> Chief Fun Officer Acme Toys
-            </p> */}
-          </Grid.Column>
+            </p>
+          </Grid.Column> */}
         </Grid.Row>
-      </Grid> */}
+      </Grid>
     </Segment>
-    <Segment style={{ padding: '8em 0em' }} vertical>
-      <Container text>
-        <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
-        </Header>
-        <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
-        </p>
-        <Button as='a' size='large'>
-          Read More
-        </Button>
+    <Segment style={{ padding: '0em' }} vertical>
+    <Grid celled='internally' columns='equal' stackable>
+      <Grid.Row textAlign='center'>
+        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+         
+          <Advertisements/>
+
+          <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+        </Grid.Column>
+        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+          <Header as='h3' style={{ fontSize: '2em' }}>
+            "I shouldn't have gone with their competitor."
+          </Header>
+          <p style={{ fontSize: '1.33em' }}>
+            <Image avatar src='/images/avatar/large/nan.jpg' />
+            <b>Nan</b> Chief Fun Officer Acme Toys
+          </p>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    </Segment>
+    <Segment>
+      <Container>
         <Divider
           as='h4'
           className='header'

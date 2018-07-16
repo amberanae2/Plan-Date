@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Advertisement } from 'semantic-ui-react'
 
-export default class AdvertisementExampleStandard extends Component {
+export default class Advertisements extends Component {
   componentDidMount() {
     (window.adsbygoogle = window.adsbygoogle || []).push({})
   }
