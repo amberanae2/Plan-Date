@@ -13,4 +13,4 @@ import App from './App';
 // import qs from 'querystring'
 
 
-render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
