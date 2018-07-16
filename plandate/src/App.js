@@ -26,7 +26,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='Plan-A-Date'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -37,7 +37,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='Let Us Help You Plan Your Date Today!'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -46,7 +46,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size='huge'>
-      Get Started
+      Search
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -94,9 +94,6 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
                     Log in
@@ -242,18 +239,18 @@ const HomepageLayout = () => (
             <Carousel/>
             
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          </Grid.Column>
-          <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+          {/* </Grid.Column>
+          {/* <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
               "I shouldn't have gone with their competitor."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
               <Image avatar src='/images/avatar/large/nan.jpg' />
               <b>Nan</b> Chief Fun Officer Acme Toys
-            </p>
+            </p> */}
           </Grid.Column>
         </Grid.Row>
-      </Grid>
+      </Grid> */}
     </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
