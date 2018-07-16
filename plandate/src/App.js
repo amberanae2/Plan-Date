@@ -20,7 +20,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-  <BackgroundSlide />
+  {/* <BackgroundSlide /> */}
     <Header
       as='h1'
       content='Plan-A-Date'
@@ -207,13 +207,13 @@ const HomepageLayout = () => (
 
             <Carousel/>
 
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>Different Events For Everyone</p>
             
             
           </Grid.Column>
         </Grid.Row>
       </Grid> */}
-    </Segment>
+    {/* </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>
@@ -235,7 +235,7 @@ const HomepageLayout = () => (
         >
   
           {/* <a href='#'>Case Studies</a> */}
-        </Divider>
+        {/* </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
         </Header>
@@ -247,9 +247,9 @@ const HomepageLayout = () => (
         <Button as='a' size='large'>
           I'm Still Quite Interested
         </Button>
-      </Container>
-    </Segment>
-    <Segment inverted vertical style={{ padding: '5em 0em' }}>
+      </Container> */}
+    {/* </Segment> */}
+    {/* // <Segment inverted vertical style={{ padding: '5em 0em' }}> */} */}
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
@@ -258,26 +258,7 @@ const HomepageLayout = () => (
               <List link inverted>
                 <List.Item as='a'>Sitemap</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
               </List>
-            </Grid.Column>
-            <Grid.Column width={3}>
-              <Header inverted as='h4' content='Services' />
-              <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
-              </List>
-            </Grid.Column>
-            <Grid.Column width={7}>
-              <Header as='h4' inverted>
-                Footer Header
-              </Header>
-              <p>
-                Extra space for a call to action inside the footer that could help re-engage users.
-              </p>
             </Grid.Column>
           </Grid.Row>
         </Grid>
