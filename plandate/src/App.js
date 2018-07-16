@@ -12,7 +12,6 @@ import {
   Menu,
   Responsive,
   Segment,
-  Sidebar,
   Visibility,
 } from 'semantic-ui-react'
 import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
@@ -89,6 +88,8 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
+                <Menu.Item as='a'>Restaurants</Menu.Item>
+                <Menu.Item as='a'>Entertainment</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>
                     Log in
@@ -130,23 +131,7 @@ class MobileContainer extends Component {
 
     return (
       <Responsive {...Responsive.onlyMobile}>
-        <Sidebar.Pushable>
-          <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Menu.Item as='a' active>
-              Home
-            </Menu.Item>
-            <Menu.Item as='a'>Work</Menu.Item>
-            <Menu.Item as='a'>Company</Menu.Item>
-            <Menu.Item as='a'>Careers</Menu.Item>
-            <Menu.Item as='a'>Log in</Menu.Item>
-            <Menu.Item as='a'>Sign Up</Menu.Item>
-          </Sidebar>
-
-          <Sidebar.Pusher
-            dimmed={sidebarOpened}
-            onClick={this.handlePusherClick}
-            style={{ minHeight: '100vh' }}
-          >
+        
             <Segment
               inverted
               textAlign='center'
@@ -172,8 +157,7 @@ class MobileContainer extends Component {
             </Segment>
 
             {children}
-          </Sidebar.Pusher>
-        </Sidebar.Pushable>
+         
       </Responsive>
     )
   }
@@ -203,17 +187,7 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
               Lets See Whats Happening!
             </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
-            </p>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
-            </p>
+           
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
@@ -234,15 +208,8 @@ const HomepageLayout = () => (
             <Carousel/>
 
             <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
-          {/* </Grid.Column>
-          {/* <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-            <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
-            </Header>
-            <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
-            </p> */}
+            
+            
           </Grid.Column>
         </Grid.Row>
       </Grid> */}
@@ -318,4 +285,5 @@ const HomepageLayout = () => (
     </Segment>
   </ResponsiveContainer>
 )
+
 export default HomepageLayout
