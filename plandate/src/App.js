@@ -15,6 +15,7 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -22,6 +23,7 @@ import {
  */
 const HomepageHeading = ({ mobile }) => (
   <Container text>
+  <BackgroundSlide />
     <Header
       as='h1'
       content='Plan-Date'

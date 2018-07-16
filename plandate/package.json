@@ -5,6 +5,7 @@
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-background-slideshow": "^1.0.3",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "semantic-ui-react": "^0.82.0"
