@@ -15,12 +15,13 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
+import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-
 const HomepageHeading = ({ mobile }) => (
   <Container text>
+  <BackgroundSlide />
     <Header
       as='h1'
       content='Plan-A-Date'
