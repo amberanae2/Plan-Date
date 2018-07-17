@@ -14,7 +14,7 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
+// import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -42,6 +42,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
+
     <Button primary size='huge'>
       Search
       <Icon name='right arrow' />
