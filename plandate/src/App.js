@@ -15,13 +15,13 @@ import {
   Sidebar,
   Visibility,
 } from 'semantic-ui-react'
-import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
+// import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-  <BackgroundSlide />
+  {/* <BackgroundSlide /> */}
     <Header
       as='h1'
       content='Plan-A-Date'
@@ -43,6 +43,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
+
     <Button primary size='huge'>
       Search
       <Icon name='right arrow' />
@@ -298,7 +299,7 @@ const HomepageLayout = () => (
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Services' />
               <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
+                <List.Item as='a'>Uber</List.Item>
                 <List.Item as='a'>DNA FAQ</List.Item>
                 <List.Item as='a'>How To Access</List.Item>
                 <List.Item as='a'>Favorite X-Men</List.Item>
