@@ -4,6 +4,7 @@ import {
   Button,
   Container,
   Divider,
+  Dropdown,
   Grid,
   Header,
   Icon,
@@ -17,6 +18,9 @@ import {
 import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import DropdownExampleSimple from './components/Dropdown/dropdown';
+// import SearchExampleStandard from './components/Search/search'
+// import Form from './components/Form/Form';
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
@@ -88,14 +92,19 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   D.P
                 </Menu.Item>
-                <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
-                </Menu.Item>
+                {/* <Dropdown.Menu>
+                  <DropdownExampleSimple></DropdownExampleSimple>
+                </Dropdown.Menu> */}
+                <Menu.Item position='right' text='Dropdown'>
+                  <DropdownExampleSimple as='a' inverted={!fixed}>
+                    Dropdown
+                  </DropdownExampleSimple>
+                  {/* <SearchExampleStandard as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
+                  Enter a City
+                  </SearchExampleStandard>  */}
+                  {/* <Form></Form> */}
+                  
+                </Menu.Item> 
               </Container>
             </Menu>
             <HomepageHeading />
