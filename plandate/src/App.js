@@ -18,6 +18,8 @@ import {
 // import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
 
 import DropdownExampleSimple from './components/Dropdown/dropdown';
 // import SearchExampleStandard from './components/Search/search'
@@ -37,6 +39,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '1.5em' : '3em',
       }}
     />
+
     <Header
       as='h2'
       content='Let Us Help You Plan Your Date Today!'
@@ -95,7 +98,11 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active>
-                  P.D
+                  Home
+                </Menu.Item>
+                <Menu.Item position='right'>
+                  <LogIn as='LogIn' inverted={!fixed}/>
+                  <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
                 </Menu.Item>
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
@@ -204,7 +211,7 @@ const HomepageLayout = () => (
            
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
