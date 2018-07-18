@@ -19,7 +19,7 @@ import {
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import DropdownExampleSimple from './components/Dropdown/dropdown';
-// import SearchExampleStandard from './components/Search/search'
+// import Search from './components/Search/Search';
 // import Form from './components/Form/Form';
 
 const HomepageHeading = ({ mobile }) => (
@@ -195,7 +195,7 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
               Lets Get Started On Your Search!
             </Header>
-           
+           {/* <Search/> */}
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
