@@ -22,7 +22,7 @@ import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 
 import DropdownExampleSimple from './components/Dropdown/dropdown';
-// import SearchExampleStandard from './components/Search/search'
+// import Search from './components/Search/Search';
 // import Form from './components/Form/Form';
 
 const HomepageHeading = ({ mobile }) => (
@@ -100,10 +100,10 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item position='right'>
+                {/* <Menu.Item position='right'>
                   <LogIn as='LogIn' inverted={!fixed}/>
                   <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
-                </Menu.Item>
+                </Menu.Item> */}
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
                 </Dropdown.Menu> */}
@@ -208,7 +208,7 @@ const HomepageLayout = () => (
               Lets Get Started On Your Search!
   
             </Header>
-           
+           {/* <Search/> */}
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
