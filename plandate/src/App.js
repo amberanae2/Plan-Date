@@ -17,12 +17,9 @@ import {
 } from 'semantic-ui-react'
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Advertisements from './Advertisements';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
 
-/* eslint-disable react/no-multi-comp */
-/* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
- * such things.
- */
 const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
@@ -36,6 +33,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '1.5em' : '3em',
       }}
     />
+
     <Header
       as='h2'
       content='Let Us Help You Plan Your Date Today!'
@@ -46,10 +44,6 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Search
-      <Icon name='right arrow' />
-    </Button>
   </Container>
 )
 
@@ -96,12 +90,8 @@ class DesktopContainer extends Component {
                   Home
                 </Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
-                  </Button>
+                  <LogIn as='LogIn' inverted={!fixed}/>
+                  <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
                 </Menu.Item>
               </Container>
             </Menu>
@@ -258,7 +248,7 @@ const HomepageLayout = () => (
       <Grid.Row textAlign='center'>
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
          
-          <Advertisements/>
+          {/* <Advertisements/> */}
 
           <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
         </Grid.Column>
