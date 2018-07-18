@@ -40,7 +40,7 @@ class Search extends Component {
           <Form
             handleFormSubmit={this.handleFormSubmit}
             handleInputChange={this.handleInputChange}
-            breeds={this.state.restaurants}
+            restaurants={this.state.restaurants}
           />
           <Results results={this.state.results} />
       </div>

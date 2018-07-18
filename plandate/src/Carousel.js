@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 
 export default () => (
-  <Carousel autoPlay>
+  <Carousel autoPlay infiniteLoop>
     <div>
       <img src="https://chopra.com/sites/default/files/field/image/6reasonswhytravelingisgoodforyou.jpg" alt="p1"/>
       {/* <p className="legend">Legend 1</p> */}

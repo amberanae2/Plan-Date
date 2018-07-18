@@ -18,6 +18,9 @@ import {
 // import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import SignUp from './components/SignUp';
+import LogIn from './components/LogIn';
+
 import DropdownExampleSimple from './components/Dropdown/dropdown';
 // import Search from './components/Search/Search';
 // import Form from './components/Form/Form';
@@ -36,6 +39,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '1.5em' : '3em',
       }}
     />
+
     <Header
       as='h2'
       content='Let Us Help You Plan Your Date Today!'
@@ -58,7 +62,10 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-
+/* Heads up!
+ * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
+ * It can be more complicated, but you can create really flexible markup.
+ */
 class DesktopContainer extends Component {
   state = {}
 
@@ -91,8 +98,12 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active>
-                  D.P
+                  Home
                 </Menu.Item>
+                {/* <Menu.Item position='right'>
+                  <LogIn as='LogIn' inverted={!fixed}/>
+                  <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
+                </Menu.Item> */}
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
                 </Dropdown.Menu> */}
@@ -193,12 +204,14 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
+
               Lets Get Started On Your Search!
+  
             </Header>
            {/* <Search/> */}
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -212,15 +225,18 @@ const HomepageLayout = () => (
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-
+          
             <Carousel/>
+
           </Grid.Column>
         </Grid.Row>
       </Grid> 
       </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
+
      </Segment> 
      <Segment inverted vertical style={{ padding: '5em 0em' }}> 
+
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
