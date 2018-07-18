@@ -18,6 +18,7 @@ import {
 // import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import DropdownExampleSimple from './components/Dropdown/dropdown';
 // import SearchExampleStandard from './components/Search/search'
 // import Form from './components/Form/Form';
@@ -58,7 +59,10 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-
+/* Heads up!
+ * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
+ * It can be more complicated, but you can create really flexible markup.
+ */
 class DesktopContainer extends Component {
   state = {}
 
@@ -193,7 +197,9 @@ const HomepageLayout = () => (
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
+
               Lets Get Started On Your Search!
+  
             </Header>
            
           </Grid.Column>
@@ -212,15 +218,18 @@ const HomepageLayout = () => (
       <Grid celled='internally' columns='equal' stackable>
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-
+          
             <Carousel/>
+
           </Grid.Column>
         </Grid.Row>
       </Grid> 
       </Segment>
     <Segment style={{ padding: '8em 0em' }} vertical>
+
      </Segment> 
      <Segment inverted vertical style={{ padding: '5em 0em' }}> 
+
       <Container>
         <Grid divided inverted stackable>
           <Grid.Row>
