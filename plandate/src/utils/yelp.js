@@ -15,6 +15,8 @@ class Yelp {
     return this.fetch("/businesses/search", { params })
       .then(res => res.data);
   }
+  
 }
 
-module.exports = Yelp;
+module.exports = Yelp
+

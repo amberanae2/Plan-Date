@@ -91,7 +91,7 @@ class DesktopContainer extends Component {
             >
               <Container>
                 <Menu.Item as='a' active>
-                  D.P
+                  P.D
                 </Menu.Item>
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
