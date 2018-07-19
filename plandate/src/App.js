@@ -20,6 +20,7 @@ import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
+import CardExampleCard from './components/Card/Card';
 
 import DropdownExampleSimple from './components/Dropdown/dropdown';
 // import Search from './components/Search/Search';
@@ -52,7 +53,7 @@ const HomepageHeading = ({ mobile }) => (
     />
 
     <Button primary size='huge'>
-      Search
+      Get Started!
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -62,10 +63,6 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {}
 
@@ -100,10 +97,10 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                {/* <Menu.Item position='right'>
+                <Menu.Item position='right'>
                   <LogIn as='LogIn' inverted={!fixed}/>
                   <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
-                </Menu.Item> */}
+                </Menu.Item>
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
                 </Dropdown.Menu> */}
@@ -111,10 +108,8 @@ class DesktopContainer extends Component {
                   <DropdownExampleSimple as='a' inverted={!fixed}>
                     Dropdown
                   </DropdownExampleSimple>
-                  {/* <SearchExampleStandard as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                  Enter a City
-                  </SearchExampleStandard>  */}
                   {/* <Form></Form> */}
+                  {/* <Search></Search> */}
                   
                 </Menu.Item> 
               </Container>
@@ -136,18 +131,9 @@ DesktopContainer.propTypes = {
 class MobileContainer extends Component {
   state = {}
 
-  handlePusherClick = () => {
-    const { sidebarOpened } = this.state
-
-    if (sidebarOpened) this.setState({ sidebarOpened: false })
-  }
-
-  handleToggle = () => this.setState({ sidebarOpened: !this.state.sidebarOpened })
-
   render() {
     const { children } = this.props
-    const { sidebarOpened } = this.state
-
+    
     return (
       <Responsive {...Responsive.onlyMobile}>
         
@@ -206,18 +192,22 @@ const HomepageLayout = () => (
             <Header as='h3' style={{ fontSize: '2em' }}>
 
               Lets Get Started On Your Search!
-  
+              <Grid.Column textAlign='center'>
+            <Button size='huge'>Check Them Out</Button>
+          </Grid.Column>
             </Header>
+
            {/* <Search/> */}
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
             {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
+            <CardExampleCard/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column textAlign='center'>
+          {/* <Grid.Column textAlign='center'>
             <Button size='huge'>Check Them Out</Button>
-          </Grid.Column>
+          </Grid.Column> */}
         </Grid.Row>
       </Grid>
     </Segment>
