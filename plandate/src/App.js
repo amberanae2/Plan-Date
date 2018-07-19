@@ -63,10 +63,6 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
 }
 
-/* Heads up!
- * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
- * It can be more complicated, but you can create really flexible markup.
- */
 class DesktopContainer extends Component {
   state = {}
 
@@ -101,10 +97,10 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                {/* <Menu.Item position='right'>
+                <Menu.Item position='right'>
                   <LogIn as='LogIn' inverted={!fixed}/>
                   <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
-                </Menu.Item> */}
+                </Menu.Item>
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
                 </Dropdown.Menu> */}
@@ -112,10 +108,8 @@ class DesktopContainer extends Component {
                   <DropdownExampleSimple as='a' inverted={!fixed}>
                     Dropdown
                   </DropdownExampleSimple>
-                  {/* <SearchExampleStandard as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                  Enter a City
-                  </SearchExampleStandard>  */}
                   {/* <Form></Form> */}
+                  {/* <Search></Search> */}
                   
                 </Menu.Item> 
               </Container>
@@ -137,18 +131,9 @@ DesktopContainer.propTypes = {
 class MobileContainer extends Component {
   state = {}
 
-  handlePusherClick = () => {
-    const { sidebarOpened } = this.state
-
-    if (sidebarOpened) this.setState({ sidebarOpened: false })
-  }
-
-  handleToggle = () => this.setState({ sidebarOpened: !this.state.sidebarOpened })
-
   render() {
     const { children } = this.props
-    const { sidebarOpened } = this.state
-
+    
     return (
       <Responsive {...Responsive.onlyMobile}>
         
