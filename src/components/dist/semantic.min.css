@@ -1,0 +1,9 @@
+.ui.inverted.segment, .ui.primary.inverted.segment {
+    background: #227ed8;
+    color: black;
+    background-color: teal;
+  }
+
+  .Header{
+      font: helvetica;
+  }
