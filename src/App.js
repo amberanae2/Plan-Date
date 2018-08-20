@@ -15,20 +15,23 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-import BackgroundSlider from './components/backgroundSlider/backgroundSlider';
-import Carousel from './Carousel';
+import Modal from './components/Modal'
+//  import BackgroundSlider from './components/backgroundSlider/backgroundSlider';
+ import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import SignUp from './components/SignUp';
+// import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import CardExampleCard from './components/Card/Card';
 
 import DropdownExampleSimple from './components/Dropdown/dropdown';
 // import Search from './components/Search/Search';
 // import Form from './components/Form/Form';
+ import './components/dist/semantic.min.css';
+
 
 const HomepageHeading = ({ mobile }) => (
-  <Container text>
-  {/* <Carousel/> */}
+  <Container>
+    <div class = "ui inverted vertical masthead center aligned segment"></div>
     <Header
       as='h1'
       content='Plan-A-Date'
@@ -52,12 +55,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-
-    <Button primary size='huge'>
+       <Modal/>
+    {/* <Button primary size='huge'>
       Get Started!
       <Icon name='right arrow' />
-    </Button>
-    
+    </Button> */}
   </Container>
 )
 
@@ -90,30 +92,37 @@ class DesktopContainer extends Component {
           >
             <Menu
               fixed={fixed ? 'top' : null}
-              inverted={!fixed}
-              pointing={!fixed}
+              // inverted={!fixed}
+              // pointing={!fixed}
               secondary={!fixed}
+              position='right'
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                {/* <Menu.Item as='a' active>
                   Home
-                </Menu.Item>
+                </Menu.Item> */}
                 <Menu.Item position='right'>
                   <LogIn as='LogIn' inverted={!fixed}/>
-                  <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/>
+                  <div class="ui language floating dropdown link item" id="languages" tabindex="0">
+          <i class="world icon"></i>
+          <div class="text">English</div>
+          <div class="menu" tabindex="-1">
+</div>
+        </div>
+                  {/* <SignUp as='SignUp' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}/> */}
                 </Menu.Item>
                 {/* <Dropdown.Menu>
                   <DropdownExampleSimple></DropdownExampleSimple>
                 </Dropdown.Menu> */}
-                <Menu.Item position='right' text='Dropdown'>
+                {/* <Menu.Item position='center' text='Dropdown'>
                   <DropdownExampleSimple as='a' inverted={!fixed}>
                     Dropdown
-                  </DropdownExampleSimple>
+                  </DropdownExampleSimple> */}
                   {/* <Form></Form> */}
                   {/* <Search></Search> */}
-                  
-                </Menu.Item> 
+{/*                   
+                </Menu.Item>  */}
               </Container>
             </Menu>
             <HomepageHeading />
@@ -151,12 +160,12 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted>
+                    <Button as='a' inverted >
                       Log in
                     </Button>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
+                    {/* <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
                       Sign Up
-                    </Button>
+                    </Button> */}
                   </Menu.Item>
                 </Menu>
               </Container>

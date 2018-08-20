@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+// import '../semantic/dist/semantic.min.css';
+
 // import { ApolloProvider } from "react-apollo";
 
 // import { Query } from "react-apollo";
