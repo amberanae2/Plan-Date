@@ -15,7 +15,7 @@ import {
   Segment,
   Visibility,
 } from 'semantic-ui-react'
-// import BackgroundSlide from './components/backgroundSlider/backgroundSlider';
+import BackgroundSlider from './components/backgroundSlider/backgroundSlider';
 import Carousel from './Carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import SignUp from './components/SignUp';
@@ -28,7 +28,7 @@ import DropdownExampleSimple from './components/Dropdown/dropdown';
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>
-  {/* <BackgroundSlide /> */}
+  {/* <Carousel/> */}
     <Header
       as='h1'
       content='Plan-A-Date'
@@ -39,8 +39,9 @@ const HomepageHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? '1.5em' : '3em',
       }}
+      
     />
-
+ 
     <Header
       as='h2'
       content='Let Us Help You Plan Your Date Today!'
@@ -56,6 +57,7 @@ const HomepageHeading = ({ mobile }) => (
       Get Started!
       <Icon name='right arrow' />
     </Button>
+    
   </Container>
 )
 
@@ -65,7 +67,7 @@ HomepageHeading.propTypes = {
 
 class DesktopContainer extends Component {
   state = {}
-
+  
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
 
@@ -184,7 +186,9 @@ ResponsiveContainer.propTypes = {
 }
 
 const HomepageLayout = () => (
+  
   <ResponsiveContainer>
+    
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
@@ -216,7 +220,7 @@ const HomepageLayout = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           
-            <Carousel/>
+            {/* <Carousel/> */}
 
           </Grid.Column>
         </Grid.Row>
